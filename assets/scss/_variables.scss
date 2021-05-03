@@ -1,0 +1,54 @@
+/* Colors */
+
+
+$red: #d40e14;
+$light-red: #ee6e73;
+
+$dark-blue: #092a5e;
+
+$black: #000000;
+$grey: #737373;
+
+$white: #ffffff;
+
+$dark-grey: #00000033;
+
+
+// Shadow
+$shadow: (
+  level1: 0px 2px 5px rgba(#000, 0.2),
+  level2: 0px 10px 20px rgba(#000, 0.15),
+  level3: 0px 24px 48px rgba(#000, 0.15)
+);
+
+@function box-shadow($key) {
+  @return map-get($shadow, $key);
+}
+
+// Spacer
+$spacer: (
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 24px,
+  6: 32px,
+  7: 40px,
+  8: 80px,
+  9: 160px
+);
+
+@function spacer($key) {
+  @return map-get($spacer, $key);
+}
+
+// Font-family
+$main-font: TUIType, 'Trebuchet MS';
+
+$font-family: (
+  main: $main-font
+);
+
+@function font-family($key) {
+  @return map-get($font-family, $key);
+}

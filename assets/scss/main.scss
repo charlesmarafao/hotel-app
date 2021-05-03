@@ -1,0 +1,168 @@
+@import '_variables';
+
+:root {
+
+  --red: #{$red};
+  --light-red: #{$light-red};
+
+  --dark-blue: #{$dark-blue};
+
+  --black: #{$black};
+  --grey-100: #{$grey};
+
+  --white: #{$white};
+
+  --dark-grey: #{$dark-grey};
+}
+
+// Resets
+html {
+  font-family: font-family(main);
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 1448px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.h1 {
+  font-size: 56px;
+  line-height: 53px;
+  font-weight: 700;
+  letter-spacing: -0.0125rem;
+}
+
+.h2 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.h3 {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.h4 {
+  font-size: 24px;
+  line-height: 25.5px;
+  font-weight: 700;
+}
+
+.h5 {
+  font-size: 20px;
+  line-height: 22.5px;
+  font-weight: 700;
+}
+
+.h6 {
+  font-size: 18px;
+  line-height: 22.5px;
+  font-weight: 700;
+  letter-spacing: 0.0125rem;
+}
+
+.p {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.p2 {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.link {
+  font-size: 20px;
+  line-height: 27.5px;
+  font-weight: 400;
+}
+
+// Helpers
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: column;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-title {
+  color: var(dark-blue);
+}
+
+// Spacer
+@for $i from 1 through 9 {
+  .ml-#{$i} {
+    margin-left: spacer($i);
+  }
+  .mt-#{$i} {
+    margin-top: spacer($i);
+  }
+  .mr-#{$i} {
+    margin-right: spacer($i);
+  }
+  .mb-#{$i} {
+    margin-bottom: spacer($i);
+  }
+
+  .pl-#{$i} {
+    padding-left: spacer($i);
+  }
+  .pt-#{$i} {
+    padding-top: spacer($i);
+  }
+  .pr-#{$i} {
+    padding-right: spacer($i);
+  }
+  .pb-#{$i} {
+    padding-bottom: spacer($i);
+  }
+}
